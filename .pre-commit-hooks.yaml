@@ -1,0 +1,22 @@
+-   id: rust-cargo-fmt
+    name: cargo fmt
+    description: Format files with cargo +nightly fmt.
+    entry: cargo +nightly fmt  --all --
+    language: system
+    files: \.rs$
+    args: []
+-   id: rust-cargo-check
+    name: cargo check
+    description: Check the package for errors.
+    entry: cargo check
+    language: system
+    files: \.rs$
+    pass_filenames: false
+-   id: rust-cargo-clippy
+    name: cargo clippy
+    description: Run the Clippy linter on the package.
+    entry: cargo clippy -- -D warnings
+    language: system
+    files: \.rs$
+    pass_filenames: false
+
